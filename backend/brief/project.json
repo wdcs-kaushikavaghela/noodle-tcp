@@ -1,0 +1,24 @@
+{
+  "name": "brief",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "backend/brief/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "brief:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "brief:build:development"
+        },
+        "production": {
+          "buildTarget": "brief:build:production"
+        }
+      }
+    }
+  }
+}
